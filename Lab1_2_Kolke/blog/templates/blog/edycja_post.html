@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% if user.is_authenticated%}
+        <h2>Nowy Post</h2>
+        <form method="POST" class="post-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="save btn btn-default">Zapisz</button>
+        </form>
+    {% else %}
+        <meta http-equiv="refresh" content="0; url=/login" />
+    {% endif %}
+{% endblock %}
