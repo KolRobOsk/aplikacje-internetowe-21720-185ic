@@ -27,7 +27,8 @@ SECRET_KEY = '8$za!78+%zu9u3fq!8&=rl-t!84-*d))k4i%$m1x1okj3eunup'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [http://21720.pythonanywhere.com]
+ALLOWED_HOSTS = ['http://21720.pythonanywhere.com',
+                 '127.0.0.1']
 
 
 # Application definition
@@ -125,3 +126,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'sent_emails')
