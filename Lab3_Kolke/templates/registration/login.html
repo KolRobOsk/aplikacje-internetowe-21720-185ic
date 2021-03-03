@@ -1,0 +1,28 @@
+{% extends "blog/base.html" %}
+
+{% block title %}
+Logowanie
+{% endblock %}
+
+
+{% block content %}
+{% if user.is_authenticated %}
+    <meta http-equiv="refresh" content="0; url=blog" />
+{% else %}
+     <form method="post" class="from-group">
+	{% csrf_token %}
+	{{form|linebreaksbr}}
+	<p>Stwórz konto <a href="/register">tutaj</a></p>
+	<button type="submit" class="btn btn-success">Zaloguj się</button>
+    </form>
+
+<div class="row">
+        <div class="col-md-8 mx-auto social-container my-2 order-md-1">
+            <button class="btn btn-danger  mb-2">
+                <a class="btn btn-primary" href="{% url 'social:begin' 'SOCIAL_AUTH_GOOGLE_OAUTH2_KEY' %}">Logowanie przez google</a>
+            </button>
+
+        </div>
+</div>
+{% endif %}
+{% endblock %}

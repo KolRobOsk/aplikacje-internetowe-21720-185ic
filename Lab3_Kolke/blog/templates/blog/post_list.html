@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+{% if user.is_authenticated %}
+    {% for post in posty %}
+        <div class="post">
+            <div class="date">
+                <p>published: {{ post.published_date }}</p>
+            </div>
+            <h1><a href="{% url 'szczeg_post' pk=post.pk %}">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+    <h3>To mój blog.</h3>
+{% else %}
+    <meta http-equiv="refresh" content="0; url=../login/" />
+{% endif %}
+{% endblock %}

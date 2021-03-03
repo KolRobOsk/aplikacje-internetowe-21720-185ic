@@ -1,5 +1,9 @@
 LOGIN_REDIRECT_URL = "post_list"
 LOGOUT_REDIRECT_URL = "login"
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = 'post_list'
+SOCIAL_AUTH_LOGIN_URL = 'login'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '619749758072-m12tr74cfojfu81o5np58f86tji4ask2.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'Lzi1MzppZ7V5kEUZE_rJeUGi'
 """
 Django settings for Lab1_Kolke project.
 
@@ -27,7 +31,8 @@ SECRET_KEY = '8$za!78+%zu9u3fq!8&=rl-t!84-*d))k4i%$m1x1okj3eunup'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [http://21720.pythonanywhere.com]
+ALLOWED_HOSTS = ['http://21720.pythonanywhere.com',
+                    '127.0.0.1',]
 
 
 # Application definition
@@ -41,7 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
     'register',
-]
+    'social_django',
+    ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -55,6 +61,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'Lab1_Kolke.urls'
 
+AUTHENTICATION_BACKENDS = [
+    'social_core.backends.open_id.OpenIdAuth',
+    'social_core.backends.google.GoogleOpenId',
+    'social_core.backends.google.GoogleOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+]
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -66,7 +78,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-            ],
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
+        ],
 
 
         },
@@ -74,8 +88,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'Lab1_Kolke.wsgi.application'
-
-
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
