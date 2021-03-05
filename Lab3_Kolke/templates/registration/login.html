@@ -24,5 +24,14 @@ Logowanie
 
         </div>
 </div>
+
+<div class="row">
+        <div class="col-md-8 mx-auto social-container my-2 order-md-1">
+            <button class="btn btn-danger  mb-2">
+                <a class="btn btn-primary" href="{% url 'social:begin' 'github' %}">Logowanie przez github</a>
+            </button>
+
+        </div>
+</div>
 {% endif %}
 {% endblock %}

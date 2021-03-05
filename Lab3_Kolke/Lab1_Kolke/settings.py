@@ -4,6 +4,8 @@ SOCIAL_AUTH_LOGIN_REDIRECT_URL = 'post_list'
 SOCIAL_AUTH_LOGIN_URL = 'login'
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '619749758072-m12tr74cfojfu81o5np58f86tji4ask2.apps.googleusercontent.com'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'Lzi1MzppZ7V5kEUZE_rJeUGi'
+SOCIAL_AUTH_GITHUB_KEY = 'b3e42832b4470a76f62f'
+SOCIAL_AUTH_GITHUB_SECRET = '35a22ec4509d6ed460dd04a675d3f14e146176da'
 """
 Django settings for Lab1_Kolke project.
 
@@ -33,7 +35,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['http://21720.pythonanywhere.com',
                     '127.0.0.1',
-                    '21720.pythonanywhere.com',]
+                    '21720.pythonanywhere.com',
+                    'localhost:8000',
+                    'localhost',]
 
 
 # Application definition
@@ -58,6 +62,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'Lab1_Kolke.urls'
@@ -66,6 +72,7 @@ AUTHENTICATION_BACKENDS = [
     'social_core.backends.open_id.OpenIdAuth',
     #'social_core.backends.google.GoogleOpenId',
     'social_core.backends.google.GoogleOAuth2',
+    'social_core.backends.github.GithubOAuth2',
     'django.contrib.auth.backends.ModelBackend',
 ]
 TEMPLATES = [
