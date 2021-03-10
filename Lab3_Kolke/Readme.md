@@ -16,6 +16,7 @@ Wstawiony post
 ![Zrzut ekranu 2021-03-05 130712](https://user-images.githubusercontent.com/69192186/110113716-c6089000-7db3-11eb-82d0-4b1dcd1d2359.png)
 
 Kwestie techniczne
+
 Dodane uwierzytelnianie przez google i github.
 Klucze tajne oraz id użytkownika służące do łączenia się z logowaniem przez ww portale (z powodów bezpieczeństwa przycięte)
 
