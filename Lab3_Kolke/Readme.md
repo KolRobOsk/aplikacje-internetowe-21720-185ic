@@ -38,3 +38,8 @@ W templacie w przypadku gdy użytkownik nie jest zalogowany, ma 2 dodatkowe przy
 
 ![image](https://user-images.githubusercontent.com/69192186/110613082-2111fc80-8191-11eb-8476-38a33cf3532a.png)
 
+Aplikacja w serwisie github
+![image](https://user-images.githubusercontent.com/69192186/110613852-0429f900-8192-11eb-9cfa-cadddd3c0a68.png)
+
+Aplikacja w google
+![image](https://user-images.githubusercontent.com/69192186/110614208-6682f980-8192-11eb-8413-6059b9986368.png)
