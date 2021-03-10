@@ -15,3 +15,15 @@ Logowanie przez github
 Wstawiony post
 ![Zrzut ekranu 2021-03-05 130712](https://user-images.githubusercontent.com/69192186/110113716-c6089000-7db3-11eb-82d0-4b1dcd1d2359.png)
 
+Kwestie techniczne
+Dodane uwierzytelnianie przez google i github.
+Klucze tajne oraz id użytkownika służące do łączenia się z logowaniem przez ww portale (z powodów bezpieczeństwa przycięte)
+![image](https://user-images.githubusercontent.com/69192186/110612427-78639d00-8190-11eb-9b60-6d7c537eb0ce.png)
+W Installed apps dodane social django oraz register, które wprowadzają funkcjonalność łączenia się z serwisami
+![image](https://user-images.githubusercontent.com/69192186/110612722-c11b5600-8190-11eb-8bbf-aa7e50ab9278.png)
+Dodane backendy potrzebne do działania logowania przez serwisy w aplikacji
+![image](https://user-images.githubusercontent.com/69192186/110612817-d98b7080-8190-11eb-8c1f-1f12588491f4.png)
+Dodane ścieżki w pliku urls.py które odpowiadają za logowanie przez social media
+![image](https://user-images.githubusercontent.com/69192186/110612940-f6c03f00-8190-11eb-8fb1-cb3f0ce089f1.png)
+W templacie w przypadku gdy użytkownik nie jest zalogowany, ma 2 dodatkowe przyciski, logowanie przez google i logowanie przez github
+![image](https://user-images.githubusercontent.com/69192186/110613082-2111fc80-8191-11eb-8476-38a33cf3532a.png)
