@@ -9,7 +9,7 @@ import Lab_4.urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
-    path('api/v1/', include('Lab_4.urls')),
+    #path('api/v1/', include('Lab_4.urls')),
     path('', include('Lab_4.urls')),
     path('api/v1/rest_auth/', include('rest_auth.urls')),
     path('api/v1/rest_auth/registration/', include('rest_auth.registration.urls')),
