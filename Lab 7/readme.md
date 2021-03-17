@@ -21,6 +21,7 @@ Serwer da się z miejsca uruchomić
 
 ![image](https://user-images.githubusercontent.com/69192186/111437755-bff3a700-8703-11eb-9c1c-4217dcdeaea1.png)
 
-Instalacja pakietu pip
+Instalacja pakietu redis przez pip
 
-![image](https://user-images.githubusercontent.com/69192186/111437850-d994ee80-8703-11eb-9b14-fd607865b1a0.png)
+![image](https://user-images.githubusercontent.com/69192186/111440326-840e1100-8706-11eb-8446-0663235cd3ad.png)
+
