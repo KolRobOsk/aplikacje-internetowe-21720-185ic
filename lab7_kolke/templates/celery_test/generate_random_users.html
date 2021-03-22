@@ -1,0 +1,9 @@
+
+{% block title %}
+Tworzenie losowych użytkowników
+<form action="" method="post">
+    {% csrf_token %}
+	{{ GenerateRandomUserView }}
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
