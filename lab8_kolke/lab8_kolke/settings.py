@@ -25,7 +25,10 @@ SECRET_KEY = 'b^e=$tyqb+oa0c2e9=5$66-zxulla0wzhjkdu#%@suvj-=!tml'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    '127.0.0.1:6379',
+                 ]
 
 
 # Application definition
@@ -37,6 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'channels',
+    'redis',
+    'chatter_21720',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +56,16 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'lab8_kolke.urls'
+
+ASGI_APPLICATION = 'lab8_kolke.asgi.application'
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}
 
 TEMPLATES = [
     {
