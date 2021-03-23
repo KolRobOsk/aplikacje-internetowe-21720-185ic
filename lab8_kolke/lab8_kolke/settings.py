@@ -34,15 +34,15 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
+    'channels',
+    'chatter_21720',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'channels',
     'redis',
-    'chatter_21720',
 ]
 
 MIDDLEWARE = [
@@ -61,9 +61,7 @@ ASGI_APPLICATION = 'lab8_kolke.asgi.application'
 CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
-        'CONFIG': {
-            "hosts": [('127.0.0.1', 6379)],
-        },
+
     },
 }
 
@@ -84,7 +82,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'lab8_kolke.wsgi.application'
-
+ASGI_APPLICATION = 'lab8_kolke.asgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
