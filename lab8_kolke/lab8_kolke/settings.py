@@ -68,7 +68,7 @@ CHANNEL_LAYERS = {
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['chatter_21720/templates', 'lab8_kolke/templates',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -2,10 +2,8 @@
 # Create your views here.
 from django.shortcuts import render
 
-def index(request):
-    return render(request, 'chatter_21720/index.html', {})
 
-def room(request, room_name):
-    return render(request, 'chatter_21720/room.html', {
-        'room_name': room_name
-    })
+def fibon(request):
+    return render(request, 'lab8_kolke/worker_1.html', {})
+def numbers(request):
+    return render(request, 'lab8_kolke/worker_2.html', {})
