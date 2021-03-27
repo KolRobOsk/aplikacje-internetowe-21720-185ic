@@ -10,7 +10,7 @@ from rest_framework.decorators import api_view
 # Create your views here.
 
 @api_view(['GET', 'POST', 'DELETE'])
-def tutorial_list(request):
+def lab_9_list(request):
     if request.method == 'GET':
         tutorials = Tutorial.objects.all()
 
@@ -36,7 +36,7 @@ def tutorial_list(request):
 
 
 @api_view(['GET', 'PUT', 'DELETE'])
-def tutorial_detail(request, pk):
+def lab_9_detail(request, pk):
     try:
         tutorial = Tutorial.objects.get(pk=pk)
     except Tutorial.DoesNotExist:
@@ -60,7 +60,7 @@ def tutorial_detail(request, pk):
 
 
 @api_view(['GET'])
-def tutorial_list_published(request):
+def lab_9_list_published(request):
     tutorials = Tutorial.objects.filter(published=True)
 
     if request.method == 'GET':

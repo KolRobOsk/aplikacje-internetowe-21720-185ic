@@ -19,7 +19,7 @@ from django.conf.urls import url
 from reactLab import views
 
 urlpatterns = [
-    url(r'^api/tutorials$', views.tutorial_list),
-    url(r'^api/tutorials/(?P<pk>[0-9]+)$', views.tutorial_detail),
-    url(r'^api/tutorials/published$', views.tutorial_list_published)
+    url(r'^api/lab_9$', views.lab_9_list),
+    url(r'^api/lab_9/(?P<pk>[0-9]+)$', views.lab_9_detail),
+    url(r'^api/lab_9/published$', views.lab_9_list_published)
 ]

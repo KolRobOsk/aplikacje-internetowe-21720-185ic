@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'reactLab.apps.ReactlabConfig',
     'corsheaders',
-        ]
+    ]
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
