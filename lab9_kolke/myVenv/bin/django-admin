@@ -1,4 +1,4 @@
-#!/home/goliath/aplikacje-internetowe-21720-185ic/lab9_kolke/myVenv/bin/python3
+#!/home/goliath/aplikacje-internetowe-21720-185ic/lab9_kolke/myVenv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
