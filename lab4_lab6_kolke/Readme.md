@@ -61,3 +61,10 @@ Plik serializers.py który pozwala na stworzenie schematu zapisania dużej iloś
 ![11](https://user-images.githubusercontent.com/69192186/112844019-8b88cf00-90a3-11eb-98c3-0273896bec45.png)
 
 
+Plik urls.py 
+
+![12](https://user-images.githubusercontent.com/69192186/112844983-9db73d00-90a4-11eb-8ee6-553620d774d8.png)
+
+Plik views.py zawierający m.in. viewsets
+
+![13](https://user-images.githubusercontent.com/69192186/112845297-00a8d400-90a5-11eb-9780-aef11e4c2746.png)
